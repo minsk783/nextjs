@@ -1,4 +1,5 @@
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -6,7 +7,7 @@ export default function Home() {
       <header className={styles.header}>
         <h4>JustContent</h4>
       </header>
-
+      
       <div className={styles.main}>
         <div className={styles.sidenav}>
           <div className={styles.filter}>
@@ -31,54 +32,78 @@ export default function Home() {
           
           <div className={styles.container}>
             <div className={styles.item}>
-              <div className={styles.box}>
-                <img src="https://via.placeholder.com/188x188" alt=""></img>
-                <p>Lorem Ipsum</p>
-              </div>
-              <div className={styles.box}>
-                <img src="https://via.placeholder.com/188x188" alt=""></img>
-                <p>Lorem Ipsum</p>
-              </div>
-              <div className={styles.box}>
-                <img src="https://via.placeholder.com/188x188" alt=""></img>
-                <p>Lorem Ipsum</p>
-              </div>
-              <div className={styles.box}>
-                <img src="https://via.placeholder.com/188x188" alt=""></img>
-                <p>Lorem Ipsum</p>
-              </div>
-              <div className={styles.box}>
-                <img src="https://via.placeholder.com/188x188" alt=""></img>
-                <p>Lorem Ipsum</p>
-              </div>
-              <div className={styles.box}>
-                <img src="https://via.placeholder.com/188x188" alt=""></img>
-                <p>Lorem Ipsum</p>
-              </div>
-              <div className={styles.box}>
-                <img src="https://via.placeholder.com/188x188" alt=""></img>
-                <p>Lorem Ipsum</p>
-              </div>
-              <div className={styles.box}>
-                <img src="https://via.placeholder.com/188x188" alt=""></img>
-                <p>Lorem Ipsum</p>
-              </div>
-              <div className={styles.box}>
-                <img src="https://via.placeholder.com/188x188" alt=""></img>
-                <p>Lorem Ipsum</p>
-              </div>
-              <div className={styles.box}>
-                <img src="https://via.placeholder.com/188x188" alt=""></img>
-                <p>Lorem Ipsum</p>
-              </div>
-              <div className={styles.box}>
-                <img src="https://via.placeholder.com/188x188" alt=""></img>
-                <p>Lorem Ipsum</p>
-              </div>
-              <div className={styles.box}>
-                <img src="https://via.placeholder.com/188x188" alt=""></img>
-                <p>Lorem Ipsum</p>
-              </div>
+              <Link href="/posts/item-post">
+                <div className={styles.box}>
+                  <img src="https://via.placeholder.com/188x188" alt=""></img>
+                  <p>Lorem Ipsum</p>
+                </div>
+              </Link>
+              <Link href="/posts/item-post">
+                <div className={styles.box}>
+                  <img src="https://via.placeholder.com/188x188" alt=""></img>
+                  <p>Lorem Ipsum</p>
+                </div>
+              </Link>
+              <Link href="/posts/item-post">
+                <div className={styles.box}>
+                  <img src="https://via.placeholder.com/188x188" alt=""></img>
+                  <p>Lorem Ipsum</p>
+                </div>
+              </Link>
+              <Link href="/posts/item-post">
+                <div className={styles.box}>
+                  <img src="https://via.placeholder.com/188x188" alt=""></img>
+                  <p>Lorem Ipsum</p>
+                </div>
+              </Link>
+              <Link href="/posts/item-post">
+                <div className={styles.box}>
+                  <img src="https://via.placeholder.com/188x188" alt=""></img>
+                  <p>Lorem Ipsum</p>
+                </div>
+              </Link>
+              <Link href="/posts/item-post">
+                <div className={styles.box}>
+                  <img src="https://via.placeholder.com/188x188" alt=""></img>
+                  <p>Lorem Ipsum</p>
+                </div>
+              </Link>
+              <Link href="/posts/item-post">
+                <div className={styles.box}>
+                  <img src="https://via.placeholder.com/188x188" alt=""></img>
+                  <p>Lorem Ipsum</p>
+                </div>
+              </Link>
+              <Link href="/posts/item-post">
+                <div className={styles.box}>
+                  <img src="https://via.placeholder.com/188x188" alt=""></img>
+                  <p>Lorem Ipsum</p>
+                </div>
+              </Link>
+              <Link href="/posts/item-post">
+                <div className={styles.box}>
+                  <img src="https://via.placeholder.com/188x188" alt=""></img>
+                  <p>Lorem Ipsum</p>
+                </div>
+              </Link>
+              <Link href="/posts/item-post">
+                <div className={styles.box}>
+                  <img src="https://via.placeholder.com/188x188" alt=""></img>
+                  <p>Lorem Ipsum</p>
+                </div>
+              </Link>
+              <Link href="/posts/item-post">
+                <div className={styles.box}>
+                  <img src="https://via.placeholder.com/188x188" alt=""></img>
+                  <p>Lorem Ipsum</p>
+                </div>
+              </Link>
+              <Link href="/posts/item-post">
+                <div className={styles.box}>
+                  <img src="https://via.placeholder.com/188x188" alt=""></img>
+                  <p>Lorem Ipsum</p>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
