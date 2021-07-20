@@ -1,9 +1,42 @@
 import Link from 'next/link'
 import styles from '../../styles/Item.module.css'
+import React, { useState, useEffect } from 'react'
+
+const BUCKET_URL = "https://hello-aws-s3.s3.ap-southeast-1.amazonaws.com";
 
 export default function ItemPost() {
-    return (
-        <div className={styles.app}>
+  const [showMe, setShowMe] = useState(false);
+  const [uploadedFileUrl, setFileUrl] = useState();
+
+  function toggle() {
+    setShowMe(!showMe);
+  }
+
+  async function handleUpload(e) {
+    const file = e.target.files[0];
+    const response = await fetch("/api/s3", {
+      method: "POST",
+      body: JSON.stringify({
+        type: file.type,
+        name: file.name
+      })
+    })
+
+    const { url } = await response.json();
+    console.log(url)
+    await fetch(url, {
+      method: "PUT",
+      body: file,
+      headers: {
+        "Content-type": file.type
+      }
+    })
+    setFileUrl('${BUCKET_URL}/${file.name}')
+  }
+
+  return (
+    <>
+      <div className={styles.app}>
         <header className={styles.header}>
           <h4>JustContent</h4>
         </header>
@@ -42,11 +75,27 @@ export default function ItemPost() {
               </div>
               
               <div className={styles.contentContainer}>
-                <button>Upload</button>
+                
+                <form id="imageForm">
+                  <input type="file" onChange={handleUpload}/>
+                  {/* <button type="submit" >Upload</button> */}
+                </form>
+                {/* <button>Upload</button> */}
+                {/* <button onClick={toggle}>Content</button>
+                <div style={{
+                  display: showMe?"block":"none"
+                }}>
+                  <div className="list">
+                    <ul>
+                      No content
+                    </ul>
+                  </div>
+                </div> */}
               </div>
             </div>
           </div>
         </div>
-        </div>
-    )
+      </div>
+    </>
+  )
 }
