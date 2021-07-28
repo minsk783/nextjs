@@ -81,6 +81,7 @@
   }
   
   .container {
+    display: flex;
     background-color: #F5F6F7;
     height: 100%;
     width: 100%;
@@ -88,11 +89,9 @@
   }
   
   .wrapper {
-		display: flex;
     background-color: white;
     width: 401px;
-    height: 904px;
-		float: left;
+    height: 100%;
   }
 
 	.info {
@@ -105,4 +104,76 @@
 		background-color: #F5F6F7;
 		width: 100%;
 		height: 100%;
+    overflow: scroll;
 	}
+
+  .uploadBtn{
+    width: 64px;
+    height: 64px;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+
+    background: #17B5BE;
+    border: none;
+    font-size: 32px;
+    font-style: bold;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 4;
+  }
+
+  /* .uploadForm {
+    width: 512px;
+    height: 256px;
+    position: relative;
+    text-align: center;
+    background: white;
+    text-align: center;
+    margin: auto;
+    padding-top: 64px;
+  } */
+  
+  /* .uploadOverlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black 0.5;
+    z-index: 2;
+  } */
+
+  .uploadForm {
+    position: absolute;
+    width: 512px;
+    height: 256px;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 3;
+  }
+
+  .fileWrapper {
+    margin: 0 128px;
+  }
+
+  .fileListHeader {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #F5F6F7;
+  }
+
+  .fileList {
+    margin: 0;
+  }
+  
+  .fileSlot {
+    max-height: 64px;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #E7E7E7;
+    padding: 20px 10px;
+  }
+
